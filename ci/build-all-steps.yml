@@ -55,8 +55,7 @@ steps:
 # Only on Windows:
 - ${{ if eq(parameters.os, 'Windows_NT') }}:
 
-  # TODO iterate thru all tasks and create nupkg files
-  # Sign nuget packages
+  # Sign all tasks as nuget packages
   - template: sign-all-tasks.yml
     parameters:
       layoutRoot: $(Build.SourcesDirectory)\_build
